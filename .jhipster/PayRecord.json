@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "payOrderid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orderInfo",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171122071658",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "pay_record",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

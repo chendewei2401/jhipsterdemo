@@ -1,0 +1,29 @@
+
+<div *ngIf="payRecord">
+    <h2><span jhiTranslate="demo1App.payRecord.detail.title">Pay Record</span> {{payRecord.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="demo1App.payRecord.payOrderid">Pay Orderid</span></dt>
+        <dd>
+            <span>{{payRecord.payOrderid}}</span>
+        </dd>
+        <dt><span jhiTranslate="demo1App.payRecord.orderInfo">Order Info</span></dt>
+        <dd>
+            <span>{{payRecord.orderInfo}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'pay-record/'+ payRecord.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
